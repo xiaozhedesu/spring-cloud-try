@@ -30,6 +30,12 @@
         <url/>
     </scm>
 
+    <modules>
+        <module>a-service</module>
+        <module>b-service</module>
+        <module>gateway</module>
+    </modules>
+
     <properties>
         <java.version>17</java.version>
         <spring-boot.version>4.0.6</spring-boot.version>

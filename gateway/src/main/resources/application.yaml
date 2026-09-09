@@ -14,14 +14,14 @@ spring:
         webflux:
           routes:
             - id: a-service
-              uri: http://127.0.0.1:8081    # 暂时先用ip，跳过配置LoadBalancer
+              uri: lb://a-service
               predicates:
               - Path=/a/**
               filters:
               - StripPrefix=1
 
             - id: b-service
-              uri: http://127.0.0.1:8082    # 暂时先用ip，跳过配置LoadBalancer
+              uri: lb://b-service
               predicates:
               - Path=/b/**
               filters:
@@ -30,4 +30,3 @@ spring:
 logging:
   level:
     org.springframework.cloud.gateway: DEBUG
-    org.springframework.web: DEBUG

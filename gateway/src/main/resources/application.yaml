@@ -1,0 +1,33 @@
+spring:
+  main:
+    web-application-type: reactive
+  application:
+    name: gateway
+
+  cloud:
+    nacos:
+      discovery:
+        server-addr: localhost:8848
+
+    gateway:
+      server:
+        webflux:
+          routes:
+            - id: a-service
+              uri: http://127.0.0.1:8081    # 暂时先用ip，跳过配置LoadBalancer
+              predicates:
+              - Path=/a/**
+              filters:
+              - StripPrefix=1
+
+            - id: b-service
+              uri: http://127.0.0.1:8082    # 暂时先用ip，跳过配置LoadBalancer
+              predicates:
+              - Path=/b/**
+              filters:
+              - StripPrefix=1
+
+logging:
+  level:
+    org.springframework.cloud.gateway: DEBUG
+    org.springframework.web: DEBUG

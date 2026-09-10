@@ -34,6 +34,7 @@
         <module>a-service</module>
         <module>b-service</module>
         <module>gateway</module>
+        <module>common-core</module>
     </modules>
 
     <properties>
@@ -70,6 +71,12 @@
                 <version>${spring-cloud-alibaba.version}</version>
                 <type>pom</type>
                 <scope>import</scope>
+            </dependency>
+
+            <dependency>
+                <groupId>club.xiaozhe</groupId>
+                <artifactId>common-core</artifactId>
+                <version>${project.version}</version>
             </dependency>
         </dependencies>
     </dependencyManagement>

@@ -1,7 +1,7 @@
 package club.xiaozhe.aservice.controller;
 
 import club.xiaozhe.aservice.client.BServiceClient;
-import club.xiaozhe.utils.TestUtils;
+import club.xiaozhe.common.core.utils.TestUtils;
 import lombok.RequiredArgsConstructor;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RestController;

@@ -1,6 +1,6 @@
 package club.xiaozhe.bservice.controller;
 
-import club.xiaozhe.utils.TestUtils;
+import club.xiaozhe.common.core.utils.TestUtils;
 import org.springframework.beans.factory.annotation.Value;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RestController;

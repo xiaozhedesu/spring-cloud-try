@@ -17,7 +17,7 @@
 ## 实践历程
 
 1. **创建微服务**：创建两个微服务`a-service`和`b-service`，单独测试接口`/test`。
-2. **部署 Nacos**：使用Docker在本机部署Nacos，，并配置两个微服务注册到 Nacos。
+2. **部署 Nacos**：使用Docker在本机部署Nacos，并配置两个微服务注册到 Nacos。
 3. **搭建 Gateway**：新建`gateway`服务，并进行配置，让`gateway`可以访问到两个服务（花时间最多）。
 4. **引入 LoadBalancer**：为`gateway`引入`LoadBalancer`依赖，测试`Nacos + LoadBalancer`的服务发现 + 负载均衡方案。
 5. **引入 OpenFeign**：修改`a-service`的行为：a的`/test`接口会携带b的`/test`信息，以尝试在项目中引入`OpenFeign`。

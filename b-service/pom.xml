@@ -47,6 +47,11 @@
             <groupId>com.alibaba.cloud</groupId>
             <artifactId>spring-cloud-starter-alibaba-nacos-discovery</artifactId>
         </dependency>
+
+        <dependency>
+            <groupId>club.xiaozhe</groupId>
+            <artifactId>common-core</artifactId>
+        </dependency>
     </dependencies>
 
     <build>

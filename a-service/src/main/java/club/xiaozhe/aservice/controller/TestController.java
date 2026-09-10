@@ -1,6 +1,7 @@
 package club.xiaozhe.aservice.controller;
 
 import club.xiaozhe.aservice.client.BServiceClient;
+import club.xiaozhe.utils.TestUtils;
 import lombok.RequiredArgsConstructor;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RestController;
@@ -12,6 +13,6 @@ public class TestController {
 
     @GetMapping("/test")
     public String test() {
-        return "Hello, World! by A-service\n" + bServiceClient.test();
+        return TestUtils.test() + "\nHello, World! by A-service\n" + bServiceClient.test();
     }
 }

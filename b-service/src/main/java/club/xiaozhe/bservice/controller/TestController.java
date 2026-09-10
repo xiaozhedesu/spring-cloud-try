@@ -1,5 +1,6 @@
 package club.xiaozhe.bservice.controller;
 
+import club.xiaozhe.utils.TestUtils;
 import org.springframework.beans.factory.annotation.Value;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RestController;
@@ -11,7 +12,7 @@ public class TestController {
 
     @GetMapping("/test")
     public String test() {
-        return "Ciallo! by B-service";
+        return TestUtils.test() + "\nCiallo! by B-service";
     }
 
     @GetMapping("/port")

@@ -27,6 +27,17 @@ spring:
               filters:
               - StripPrefix=1
 
-logging:
-  level:
-    org.springframework.cloud.gateway: DEBUG
+  config:
+    import:
+      # 动态引入 Nacos Config 配置
+      # Data ID: gateway-logging.yaml
+      # Group:   LOG_GROUP
+      # 由于配置内容在 Nacos Config 中，git无法直接跟踪
+      # 所以将配置用注释记录在这里
+      # 该配置原用于临时开启gateway项目的DEBUG日志：
+      # -------------------------------------------
+      # logging:
+      #   level:
+      #     org.springframework.cloud.gateway: DEBUG
+      # -------------------------------------------
+      - nacos:gateway-logging.yaml?group=LOG_GROUP&refreshEnabled=true

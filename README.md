@@ -2,9 +2,15 @@
 
 ## 任务
 
+### 主线
+
 构建一个 Spring Cloud 项目，其中包含 **Gateway + Nacos + OpenFeign + LoadBalancer** 四个技术栈。
 
 部署两个微服务（`a-service` 和 `b-service`），各自提供一个 `/test` 接口。二者可以独立访问，但请求 `a-service` 时，它会通过 OpenFeign 同步调用 `b-service`，形成一个完整的调用链路。
+
+### 当前分支：gateway-jwt-auth
+
+目的：以当前项目为基础，对 **JWT token** 和 **Spring Security** 进行练习。
 
 ## 版本
 

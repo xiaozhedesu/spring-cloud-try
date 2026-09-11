@@ -22,7 +22,8 @@
 4. **引入 LoadBalancer**：为`gateway`引入`LoadBalancer`依赖，测试`Nacos + LoadBalancer`的服务发现 + 负载均衡方案。
 5. **引入 OpenFeign**：修改`a-service`的行为：a的`/test`接口会携带b的`/test`信息，以尝试在项目中引入`OpenFeign`。
 6. **验证负载均衡**：在`b-service`中新增`/port`接口，启动两个`b-service`实例，测试`LoadBalancer`的负载均衡功能。
-7.  **创建公共模块**：创建 `common-core` 模块，编写静态工具类 `TestUtils.test()`，让 `a-service` 和 `b-service` 分别引入依赖并调用，验证跨模块工具类的编译与运行。
+7. **创建公共模块**：创建 `common-core` 模块，编写静态工具类 `TestUtils.test()`，让 `a-service` 和 `b-service` 分别引入依赖并调用，验证跨模块工具类的编译与运行。
+8. **引入 Nacos Config**：为所有微服务引入`Log4j2`日志依赖；`gateway`将日志级别配置迁移至`Nacos`，`b-service`通过`Nacos`验证日志级别的动态刷新。
 
 ## 关于Gateway
 

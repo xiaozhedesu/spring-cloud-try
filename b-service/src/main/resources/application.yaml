@@ -9,3 +9,15 @@ spring:
     nacos:
       discovery:
         server-addr: localhost:8848
+
+  config:
+    import:
+      # 从 Nacos Config 处拉取配置使用
+      # 配置 refreshEnable=true 时，配置可以被动态修改
+      # 以下记录一个测试用配置，用于验证日志级别动态刷新：
+      # -------------------------------------------
+      # logging:
+      #   level:
+      #     club.xiaozhe: DEBUG
+      # -------------------------------------------
+      - nacos:b-service-logging.yaml?group=LOG_GROUP&refreshEnabled=true
